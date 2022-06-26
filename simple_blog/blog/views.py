@@ -15,7 +15,7 @@ def blogs(request):
     return render(request, 'nuevo_blog/bases.html', {'blogs': blogs})
 
 def crear_blogs(request):
-    formulario = BlogForm(request)
+    formulario = BlogForm(request.POST or None)
     return render(request, 'nuevo_blog/crear.html'), {'formulario': formulario}
 
 def editar(request):
