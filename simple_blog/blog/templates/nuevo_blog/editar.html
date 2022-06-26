@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+
+{% block titulo %} Editar blog {% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">
+        Editar blog
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos del blog</h4>
+
+        {% include 'nuevo_blog/form.html' %}
+
+    </div>
+    <div class="card-footer text-muted">
+        
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+
+{% block titulo %} Lista de Blogs {% endblock %}
+
+{% block contenido %}
+<div class="card">
+    <div class="card-header">
+        <a name="" id="" class="btn btn-success" href="{% url 'crear_blogs' %}" role="button">Agregar nuevo blog</a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Lista de Blogs</h4>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Titulo</th>
+                    <th>Asunto</th>
+                    <th>Autor</th>
+                    <td>Acciones</td>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for blog in blogs %}
+                <tr>
+                    <td>{{ blog.id }}</td>
+                    <td>{{ blog.titulo }}</td>
+                    <td>{{ blog.subtitulo }}</td>
+                    <td>{{ blog.autor }}</td>
+                    <td> <a name="" id="" class="btn btn-info" href="{% url 'editar' %}" role="button">Editar</a>| <a name="" id="" class="btn btn-info" href="#" role="button">Borrar</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+    </div>
+    
+</div>
+{% endblock %}
