@@ -28,7 +28,7 @@
                     <td>{{ blog.titulo }}</td>
                     <td>{{ blog.subtitulo }}</td>
                     <td>{{ blog.autor }}</td>
-                    <td> <a name="" id="" class="btn btn-info" href="{% url 'editar' %}" role="button">Editar</a>| <a name="" id="" class="btn btn-info" href="#" role="button">Borrar</a></td>
+                    <td> <a name="" id="" class="btn btn-info" href="{% url 'editar' blog.id %}" role="button">Editar</a>| <a name="" id="" class="btn btn-info" href="{% url 'eliminar' blog.id %}" role="button">Borrar</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
