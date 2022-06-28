@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, HttpRequest
 from .models import Blog
 from .forms import BlogForm
 # Create your views here.
@@ -15,11 +14,16 @@ def blogs(request):
     return render(request, 'nuevo_blog/bases.html', {'blogs': blogs})
 
 def crear_blogs(request):
-    formulario = BlogForm(request or None, request.FILES or None)
-    if formulario.is_valid():
-        formulario.save()
-        return redirect('blogs')
-    return render(request, 'nuevo_blog/crear.html'), {'formulario': formulario}
+    if request.method == "POST":
+        formulario = BlogForm(request.POST, request.FILES)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('blogs')
+        else:
+            return render(request, 'nuevo_blog/crear.html',{'formulario': formulario})
+    else:
+        formulario = BlogForm()
+        return render(request, 'nuevo_blog/crear.html',{'formulario': formulario})
 
 def editar(request, id):
     blog = Blog.objects.get(id=id)
