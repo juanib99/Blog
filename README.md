@@ -61,12 +61,11 @@ $ pip install django-bootstrap-v5
 windows:
 
 ```PS
-C:\> git clone https://github.com/julianrametta/Entrega1-Calo-Bisello-Rametta.git
-```
+C:\> git clone https://github.com/juanib99/Blog
 
 Linux/Mac:
 ```bash
-$ git clone https://github.com/julianrametta/Entrega1-Calo-Bisello-Rametta.git
+$ git clone https://github.com/juanib99/Blog
 ```
 
 ## Correr el Servidor
@@ -74,7 +73,7 @@ $ git clone https://github.com/julianrametta/Entrega1-Calo-Bisello-Rametta.git
 Los siguinetes comandos son analogos en Mac/Linux/Windows:
 
 ```bash
-cd blog
+cd simple_blog
 python manage.py migrate
 ```
 La consola mostrara las migraciones de la base de datos que se realizaron.
