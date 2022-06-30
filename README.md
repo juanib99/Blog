@@ -62,6 +62,7 @@ windows:
 
 ```PS
 C:\> git clone https://github.com/juanib99/Blog
+```
 
 Linux/Mac:
 ```bash
