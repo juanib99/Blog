@@ -33,6 +33,11 @@ def editar(request, id):
         return redirect('blogs')
     return render(request, 'nuevo_blog/editar.html', {'formulario':formulario})
 
+def ver(request, id):
+    blog = Blog.objects.get(id=id)
+    return render(request, 'nuevo_blog/ver.html', {'blog':blog})
+
+
 def eliminar(request, id):
     blog = Blog.objects.get(id=id)
     blog.delete()

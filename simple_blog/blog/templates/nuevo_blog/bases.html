@@ -9,7 +9,7 @@
     </div>
     <div class="card-body">
         <h4 class="card-title">Lista de Blogs</h4>
-
+        
         <table class="table">
             <thead>
                 <tr>
@@ -28,7 +28,7 @@
                     <td>{{ blog.titulo }}</td>
                     <td>{{ blog.subtitulo }}</td>
                     <td>{{ blog.autor }}</td>
-                    <td> <a name="" id="" class="btn btn-info" href="{% url 'editar' blog.id %}" role="button">Editar</a>| <a name="" id="" class="btn btn-info" href="{% url 'eliminar' blog.id %}" role="button">Borrar</a></td>
+                    <td> <a name="" id="" class="btn btn-info" href="{% url 'ver' blog.id %}" role="button">Ver</a> <a name="" id="" class="btn btn-info" href="{% url 'editar' blog.id %}" role="button">Editar</a>| <a name="" id="" class="btn btn-info" href="{% url 'eliminar' blog.id %}" role="button">Borrar</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
