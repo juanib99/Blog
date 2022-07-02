@@ -6,6 +6,11 @@
 El proyecto debe incluir una web estilo blog programada en
 Python en Django. Esta web tendrá admin, perfiles, registró, páginas y formularios.
 
+**Video demostrativo:**  
+
+https://youtu.be/hU0BJdvRRZI
+
+
 **importante: Este ejemplo fue probado con python 3.8.13 y Django 4.0.4**
 
 ## Checkear que tengas Python
@@ -42,8 +47,19 @@ Linux/Mac:
 $ pip install django
 ```
 
-Si no arrojo errores esto es suficiente para poder correr el projecto.
+# Instalar django ckeditor
 
+En una terminal cmd o powershell desde windows:
+
+```PS
+C:\> pip install django-ckeditor
+```
+
+Linux/Mac:
+
+```bash
+$ pip install django-ckeditor
+```
 
 # Instalar django bootstrap v5
 
@@ -71,7 +87,7 @@ $ git clone https://github.com/juanib99/Blog
 
 ## Correr el Servidor
 
-Los siguinetes comandos son analogos en Mac/Linux/Windows:
+Los siguientes comandos son analogos en Mac/Linux/Windows:
 
 ```bash
 cd simple_blog

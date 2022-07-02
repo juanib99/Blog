@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% block titulo %} Ver blog {% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">
+        Ver blog
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">{{ blog.titulo }}</h4>
+        <h5> {{ blog.subtitulo }} </h5>
+        {% autoescape off %}
+        {{blog.texto}}
+        {% endautoescape %}
+        <br></br>
+        {{ blog.autor }}
+        <br></br>
+        {{ blog.fecha }}
+
+    </div>
+    <div class="card-footer text-muted">
+        
+    </div>
+</div>
+
+
+
+{% endblock %}
